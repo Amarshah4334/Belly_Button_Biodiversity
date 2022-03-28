@@ -1,7 +1,7 @@
-//global variable
+//Create the variable
 var data;
 
-//init function to fill in the select option
+
 
 function init() {
   d3.json("JS/data/samples.json").then(dataInitial => {
@@ -48,10 +48,7 @@ function demographicFunc(valueSelect) {
 
   var out_label = filterValue2.map(v => v.otu_labels);
   var names = treatBacName(out_label[0]).slice(0, 10);
-  // console.log(ouid);
-  // console.log(valueX);
-  // console.log(out_label);
-  // console.log(names);
+
 
   // Create the Trace
   var trace = {
@@ -130,7 +127,7 @@ function gaugeChart(valueSelect) {
     {
       domain: { x: [0, 1], y: [0, 1] },
       title: {
-        text: "Belly Button Washing Frequency <br>Scrubs per Week"
+        text: "Weekly Belly Button Washing Frequency <br>Number of Scrubs per Week"
       },
       type: "indicator",
 
